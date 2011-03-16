@@ -11,7 +11,7 @@ from models import Campaign, Stats
 import random
 
 import datetime
-from fbc import settings
+import settings
 
 def decode_subid(subid):
     params_map = {} 

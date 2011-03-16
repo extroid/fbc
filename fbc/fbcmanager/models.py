@@ -18,7 +18,7 @@ from django.contrib.auth.models import User
 class Campaign(models.Model):
     user = models.ForeignKey(User)
     name = models.CharField(max_length=255)
-    WH_url = models.URLField(max_length=4096)
+    WH_url = models.URLField(max_length=4096, verify_exists=False)
     BH_urls = models.TextField()
     
     def __unicode__ (self):
