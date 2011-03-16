@@ -15,7 +15,7 @@ import settings
 
 def decode_subid(subid):
     params_map = {} 
-    params = subid.split(' ')
+    params = subid.split(';')
     for param in params:
         p, v = param.split(':')
         params_map[p]=v
@@ -25,7 +25,7 @@ def decode_subid(subid):
 def encode_subid(cid, params_map):
     subid = "cid:"+cid
     for k,v in params_map.items():
-        subid += '+%s:%s' % (k,v)
+        subid += ';%s:%s' % (k,v)
     return subid    
 
 def get_stats_for_today(campaign):
