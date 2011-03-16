@@ -9,6 +9,9 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+JUMP_URL='http://www.adobe.nu/fbc'
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.

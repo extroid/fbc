@@ -11,6 +11,7 @@ from models import Campaign, Stats
 import random
 
 import datetime
+from fbc import settings
 
 def decode_subid(subid):
     params_map = {} 
@@ -44,7 +45,7 @@ def incoming(request, campaignName):
     stats.incoming_clicks += 1
     stats.save()
     
-    return HttpResponseRedirect('http://www.adobe.nu/fbc?subid=%s' % subid)
+    return HttpResponseRedirect('%s?subid=%s' % (settings.JUMP_URL, subid))
 
 def process_wh_url(request):
     if request.method=='GET':
